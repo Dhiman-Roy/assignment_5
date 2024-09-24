@@ -121,16 +121,27 @@ document
 
 //redirect another page
 
-// document.getElementById("homeButton").addEventListener("click", function () {
-//   console.log("hiii");
-//   window.location.href = "./index.html";
-// });
-// document.getElementById("blogButton").addEventListener("click", function () {
-//   window.location.href = "./blog.html";
-// });
 function blogPage() {
   window.location.href = "./blog.html";
 }
 function home() {
   window.location.href = "./index.html";
+}
+
+//frquent ques ans
+
+function question1() {
+  document.getElementById("answer1").classList.remove("hidden");
+}
+function question2() {
+  document.getElementById("answer2").classList.remove("hidden");
+}
+function question3() {
+  document.getElementById("answer3").classList.remove("hidden");
+}
+function question4() {
+  document.getElementById("answer4").classList.remove("hidden");
+}
+function question5() {
+  document.getElementById("answer5").classList.remove("hidden");
 }

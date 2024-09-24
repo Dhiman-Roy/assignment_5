@@ -45,6 +45,67 @@
         </div>
       </div>
     </div>
+    <h2 class="text-2xl font-extrabold text-center mt-6 mb-6">Important FAQ</h2>
+    <div class="faqContainer max-w-screen-lg mx-auto">
+      <div class="card border rounded bg-gray-200 mb-3 p-5">
+        <h2
+          class="text-xl font-bold cursor-pointer"
+          id="ques1"
+          onclick="question1()"
+        >
+          How do you declare a variable in JavaScript?
+        </h2>
+        <p class="hidden" id="answer1">let, const, or var</p>
+      </div>
+      <div class="card border rounded bg-gray-200 mb-3 p-5">
+        <h2
+          class="text-xl font-bold cursor-pointer"
+          onclick="question2()"
+          id="ques2"
+        >
+          What is the difference between let and var?
+        </h2>
+        <p class="hidden" id="answer2">
+          let has block scope, while var has function scope.
+        </p>
+      </div>
+      <div class="card border rounded bg-gray-200 mb-3 p-5">
+        <h2
+          class="text-xl font-bold cursor-pointer"
+          onclick="question3()"
+          id="ques3"
+        >
+          What is the purpose of the null value in JavaScript?
+        </h2>
+        <p class="hidden" id="answer3">
+          null represents the absence of a value.
+        </p>
+      </div>
+      <div class="card border rounded bg-gray-200 mb-3 p-5">
+        <h2
+          class="text-xl font-bold cursor-pointer"
+          onclick="question4()"
+          id="ques4"
+        >
+          What is the difference between == and === in JavaScript?
+        </h2>
+        <p class="hidden" id="answer4">
+          == compares values, while === compares both values and data types.
+        </p>
+      </div>
+      <div class="card border rounded bg-gray-200 mb-3 p-5">
+        <h2
+          class="text-xl font-bold cursor-pointer"
+          onclick="question5()"
+          id="ques5"
+        >
+          How do you add a comment to JavaScript code?
+        </h2>
+        <p class="hidden" id="answer5">
+          Use // for single-line comments or /* */ for multi-line comments.
+        </p>
+      </div>
+    </div>
   </body>
   <script src="./homepage.js"></script>
   <script src="./utilities.js"></script>
