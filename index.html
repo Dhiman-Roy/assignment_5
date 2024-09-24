@@ -19,6 +19,25 @@
     </style>
   </head>
   <body class="lexend m-0 p-0 box-border max-w-screen-2xl mx-auto">
+    <div
+      class="modalContainer hidden h-full w-full left-0 top-0 z-10 fixed overflow-auto"
+      id="modalContainer"
+    >
+      <div class="modal flex justify-center items-center my-auto">
+        <div
+          class="modalArticle flex justify-center items-center flex-col max-w-80 max-h-80"
+        >
+          <h2>Congrates!</h2>
+          <img src="./assets/coin.png" alt="" />
+          <p class="mb-2">You have donated for humankind</p>
+          <p class="mb-2 text-lg font-semibold">Successfully</p>
+          <button id="modalCloseButton" class="border p-2 bg-slate-300 rounded">
+            close confirmation
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="navContainer sticky top-0 w-full">
       <div
         class="navbar bg-[#F9F7F3] gap-2 pt-3 pb-4 flex flex-col items-center lg:flex-row lg:justify-between lg:px-14"
@@ -36,24 +55,28 @@
           <div class="h-6 w-6">
             <img class="w-full h-full" src="./assets/coin.png" alt="" />
           </div>
-          <div class="text-xl font-medium">50000</div>
+          <div id="grossAmount" class="text-xl font-medium">50000</div>
           <div class="text-xl font-medium">BDT</div>
         </div>
       </div>
       <div class="navButtons bg-white">
         <div class="flex justify-center gap-4 py-6">
           <button
-            class="py-3 px-8 bg-[#B4F461] border rounded-lg font-semibold text-xl"
+            id="donationButton"
+            class="py-3 px-8 border rounded-lg font-semibold text-xl"
           >
             Donation
           </button>
-          <button class="py-3 px-8 border rounded-lg font-semibold text-xl">
+          <button
+            id="historyButton"
+            class="py-3 px-8 border rounded-lg font-semibold text-xl"
+          >
             History
           </button>
         </div>
       </div>
     </div>
-    <div class="donationContainer py-4">
+    <div class="donationContainer hidden py-4" id="donationContainer">
       <div
         class="flex flex-col items-center border px-5 rounded-lg py-5 gap-4 lg:flex-row max-w-[1140px] mx-auto lg:gap-8 mb-6"
       >
@@ -69,7 +92,9 @@
             <div class="h-6 w-6">
               <img class="" src="./assets/coin.png" alt="" />
             </div>
-            <div class="text-xl font-medium">3000</div>
+            <div id="totalDonationNoakhali" class="text-xl font-medium">
+              3000
+            </div>
             <div class="text-xl font-medium">BDT</div>
           </div>
           <h2 class="font-bold text-xl">
@@ -83,16 +108,21 @@
             relief efforts and making a positive impact on the lives of those in
             need.
           </p>
-          <input
-            type="text"
-            class="w-full rounded-lg p-4 text-base font-light border mb-5"
-            placeholder="Write Donation Amount"
-          />
-          <button
-            class="py-3 px-8 bg-[#B4F461] rounded-lg w-full font-semibold text-xl"
-          >
-            Donate Now
-          </button>
+          <form action="">
+            <input
+              id="donateNoakhaliInput"
+              type="text"
+              class="w-full rounded-lg p-4 text-base font-light border mb-5"
+              placeholder="Write Donation Amount"
+            />
+            <button
+              type="submit"
+              id="donateNoakhali"
+              class="py-3 px-8 bg-[#B4F461] rounded-lg w-full font-semibold text-xl"
+            >
+              Donate Now
+            </button>
+          </form>
         </div>
       </div>
 
@@ -111,7 +141,7 @@
             <div class="h-6 w-6">
               <img class="" src="./assets/coin.png" alt="" />
             </div>
-            <div class="text-xl font-medium">2500</div>
+            <div id="totalDonationFeni" class="text-xl font-medium">2500</div>
             <div class="text-xl font-medium">BDT</div>
           </div>
           <h2 class="font-bold text-xl">
@@ -128,11 +158,13 @@
             need.
           </p>
           <input
+            id="donateFeniInput"
             type="text"
             class="w-full rounded-lg p-4 text-base font-light border mb-5"
             placeholder="Write Donation Amount"
           />
           <button
+            id="donateFeni"
             class="py-3 px-8 bg-[#B4F461] rounded-lg w-full font-semibold text-xl"
           >
             Donate Now
@@ -155,7 +187,7 @@
             <div class="h-6 w-6">
               <img class="" src="./assets/coin.png" alt="" />
             </div>
-            <div class="text-xl font-medium">2700</div>
+            <div id="totalDonationQuota" class="text-xl font-medium">2700</div>
             <div class="text-xl font-medium">BDT</div>
           </div>
           <h2 class="font-bold text-xl">
@@ -173,11 +205,13 @@
             their time of need.
           </p>
           <input
+            id="donateQuotaInput"
             type="text"
             class="w-full rounded-lg p-4 text-base font-light border mb-5"
             placeholder="Write Donation Amount"
           />
           <button
+            id="donateQuota"
             class="py-3 px-8 bg-[#B4F461] rounded-lg w-full font-semibold text-xl"
           >
             Donate Now
@@ -185,5 +219,16 @@
         </div>
       </div>
     </div>
+    <!-- history page started -->
+    <div class="historyContainer hidden" id="historyContainer">
+      <!-- <div
+        class="historyCard p-5 rounded-lg border mb-4 max-w-[1140px] mx-auto" id="historyCard"
+      >
+        <h2 class="font-bold text-xl">677 taka is donated</h2>
+        <p class="font-medium text-base text-black-rgba">date</p>
+      </div> -->
+    </div>
   </body>
+  <script src="./homepage.js"></script>
+  <script src="./utilities.js"></script>
 </html>
