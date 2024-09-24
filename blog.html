@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+        font-optical-sizing: auto;
+      }
+    </style>
+  </head>
+  <body class="lexend m-0 p-0 box-border max-w-screen-2xl mx-auto">
+    <div class="navContainer sticky top-0 w-full">
+      <div
+        class="navbar bg-[#F9F7F3] gap-2 pt-3 pb-4 flex flex-col items-center lg:flex-row lg:justify-between lg:px-14"
+      >
+        <button
+          class="py-3 px-8 bg-[#B4F461] rounded-lg font-semibold text-xl"
+          id="homeButton"
+          onclick="homePage()"
+        >
+          Home
+        </button>
+        <div class="flex items-center gap-2">
+          <div class="h-12 w-12">
+            <img class="w-full h-full" src="./assets/logo.png" alt="" />
+          </div>
+          <div class="font-semibold text-xl">Donate Bangladesh</div>
+        </div>
+        <div class="flex items-center gap-1">
+          <div class="h-6 w-6">
+            <img class="w-full h-full" src="./assets/coin.png" alt="" />
+          </div>
+          <div class="text-xl font-medium">50000</div>
+          <div class="text-xl font-medium">BDT</div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./blogPage.js"></script>
+  <script src="./utilities.js"></script>
+</html>

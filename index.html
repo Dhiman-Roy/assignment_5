@@ -40,9 +40,13 @@
       <div
         class="navbar bg-[#F9F7F3] gap-2 pt-3 pb-4 flex flex-col items-center lg:flex-row lg:justify-between lg:px-14"
       >
-        <div class="py-3 px-8 bg-[#B4F461] rounded-lg font-semibold text-xl">
+        <button
+          onclick="blogPage()"
+          class="py-3 px-8 bg-[#B4F461] rounded-lg font-semibold text-xl"
+          id="blogButton"
+        >
           Blog
-        </div>
+        </button>
         <div class="flex items-center gap-2">
           <div class="h-12 w-12">
             <img class="w-full h-full" src="./assets/logo.png" alt="" />
@@ -228,5 +232,6 @@
     </div>
   </body>
   <script src="./homepage.js"></script>
+  <script src="./blogPage.js"></script>
   <script src="./utilities.js"></script>
 </html>

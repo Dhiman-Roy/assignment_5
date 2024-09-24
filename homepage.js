@@ -118,3 +118,19 @@ document
   .addEventListener("click", function () {
     document.getElementById("modalContainer").classList.add("hidden");
   });
+
+//redirect another page
+
+// document.getElementById("homeButton").addEventListener("click", function () {
+//   console.log("hiii");
+//   window.location.href = "./index.html";
+// });
+// document.getElementById("blogButton").addEventListener("click", function () {
+//   window.location.href = "./blog.html";
+// });
+function blogPage() {
+  window.location.href = "./blog.html";
+}
+function homePage() {
+  window.location.href = "./index.html";
+}
