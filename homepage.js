@@ -131,6 +131,6 @@ document
 function blogPage() {
   window.location.href = "./blog.html";
 }
-function homePage() {
+function home() {
   window.location.href = "./index.html";
 }
